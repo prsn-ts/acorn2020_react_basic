@@ -1,3 +1,5 @@
+## 내려받은 프로젝트를 실행하려면 >npm install 을 입력해서 의존 모듈을 설치한 후에 실행 하세요.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
