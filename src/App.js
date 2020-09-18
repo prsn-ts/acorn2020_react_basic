@@ -11,6 +11,8 @@ class App extends Component {
   //App.js 를 이용해서 화면 구성을 할때 호출되는 메소드 
   render() {
     const myName="김구라";
+    // true or false 로 바꿔 가면서 테스트 해 보세요.
+    const isMan=true;
     return (
       <div className="container">
         {/* class 는 예약어이기 때문에 className 을 사용한다. */}
@@ -18,6 +20,8 @@ class App extends Component {
         <p>내이름은 <strong>{myName}</strong></p>
         <img src={logo} alt="react js 로고 입니다."/>
         <img src={kim} alt="김구라 이미지"/>
+        <p>당신은 {isMan ? "남자" : "여자"} 이군요</p>
+        <p>{isMan && "당신은 남자 이군요"}</p>
       </div>
     );
   }
