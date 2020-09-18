@@ -13,6 +13,13 @@ class App extends Component {
     const myName="김구라";
     // true or false 로 바꿔 가면서 테스트 해 보세요.
     const isMan=true;
+    // 요소에 적용할 인라인 css 를 object 로 정의하고 적용할수 있다.
+    const boxStyle={
+      width:"100px",
+      height:"100px",
+      border:"1px solid red",
+      backgroundColor:"yellow" //여러단어로 구성된 속성은 camel case 를 사용한다.
+    };
     return (
       <div className="container">
         {/* class 는 예약어이기 때문에 className 을 사용한다. */}
@@ -35,6 +42,7 @@ class App extends Component {
         }}>
           눌러보셈
         </button>
+        <div style={boxStyle}>box</div>
       </div>
     );
   }
