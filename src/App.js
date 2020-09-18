@@ -1,10 +1,14 @@
-import React,{ Component } from 'react';
+//React,{component}의 의미는 React안에 Component를 가지고있어서 React.Component라고 쓸 수도 있다
+import React,{ Component } from 'react'; 
 //이미지 경로를 import 해서 사용한다.
 import logo from './logo.svg';
 import kim from './images/kim1.png';
 //css 파일을 import 만 해도 css 가 자동 적용된다.
 import './css/bootstrap.css';
 import './App.css';
+//MyComponent import 하기(import 옆에 나오는 키워드는 변수명 짓듯이 마음대로 바꿀 수 있지만 가독성을 위해 동일하게 작성)
+import MyComponent from './MyComponent';
+
 
 //class 표현식으로 App 구성하기 
 class App extends Component {
@@ -43,6 +47,10 @@ class App extends Component {
           눌러보셈
         </button>
         <div style={boxStyle}>box</div>
+        {/* 다른 Component를 포함 시킬 수 있다.*/}
+        {/* 숫자의 경우 {} 중괄호 안에 넣어야 숫자 타입을 정의할 수 있다 */}
+        <MyComponent title="MyComponent1" num={1000}/>
+        <MyComponent title="MyComponent2" num={2000}/>
       </div>
     );
   }
