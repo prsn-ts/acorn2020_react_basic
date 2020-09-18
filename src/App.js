@@ -51,6 +51,7 @@ class App extends Component {
         {/* 숫자의 경우 {} 중괄호 안에 넣어야 숫자 타입을 정의할 수 있다 */}
         <MyComponent title="MyComponent1" num={1000}/>
         <MyComponent title="MyComponent2" num={2000}/>
+        <MyComponent/>
       </div>
     );
   }
