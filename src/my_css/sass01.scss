@@ -1,0 +1,54 @@
+/* sass 를 이용해서 css programming 이 가능하다 */
+
+$width:992px; //width 라는 이름의 변수 만들고 초기값 대입
+
+.container{
+    width: $width; //변수를 참조 
+    margin: 0 auto;
+}
+
+
+.msg-list{
+    margin-left:384px;
+}
+
+.msg-list li{
+    color: red;
+}
+
+.msg-list li:hover{
+    background-color: yellow;
+}
+
+/*
+.msg-list{
+    margin-left: $width/2;
+    li{
+        color: red;
+        &:hover{
+            background-color: yellow;
+        }
+    }
+} 
+*/
+
+@for $i from 1 through 10{
+    .col-xs-#{$i}{
+        width: 100*$i;
+    }
+}
+
+@mixin box($width:100px, $height:100px) {
+    width: $width;
+    height: $height;
+    border: 1px solid red;
+}
+
+.my-box{
+    @include box();
+    background-color: yellow;
+}
+.your-box{
+    @include box(200px, 300px);
+    background-color: pink;
+} 
