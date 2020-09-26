@@ -20,6 +20,11 @@ const MyComponent=(props)=>{
             <h2>MyComponent 입니다.</h2>
             <p>내이름은 : <strong>{myName}</strong></p>
             <p>부모의 이름은 : <strong>{props.parentName}</strong></p>
+            {/* 
+                props.children에서 children은 App07_functional.js 예제에
+                MyComponent를 임포트하여 쓰고 있는 데 그중에서 innerText 부분
+                즉, "손오공"을 나타낸다.
+            */}
             <p>자식의 이름은 : <strong>{props.children}</strong></p>
             <button onClick={()=>{
                 setCount(count+1);
