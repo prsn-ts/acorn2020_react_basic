@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default ()=>{
+  export default ()=>{
     return (
         <div>
             <h1>Material Ui 사용해 보기</h1>
