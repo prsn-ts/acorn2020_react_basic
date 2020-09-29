@@ -1,6 +1,9 @@
 import React from 'react';
+import './css/bootstrap.css';
 
 const App10_Ajax=()=>{
+
+    const [cafeList, setList]=React.useState([]);
 
     const request=()=>{
         /*
@@ -19,6 +22,16 @@ const App10_Ajax=()=>{
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
+            const result=data.list.map((item)=>{
+                return (
+                    <tr key={item.num}>
+                        <td>{item.num}</td>
+                        <td>{item.title}</td>
+                        <td>{item.writer}</td>
+                    </tr>
+                );
+            });
+            setList(result);
         })
         .catch(err=>{
             console.log(err);
@@ -26,17 +39,19 @@ const App10_Ajax=()=>{
     };
 
     return(
-        <div>
+        <div className="container">
             <h1>ajax 요청 테스트</h1>
             <button onClick={request}>요청하기</button>
-            <table>
-                <thead>
-                    <th>글번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
+            <table className="table">
+                <thead className="thead-dark">
+                    <tr>
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                    </tr>
                 </thead>
                 <tbody>
-
+                    {cafeList}
                 </tbody>
             </table>
         </div>
