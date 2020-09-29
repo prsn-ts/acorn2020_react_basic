@@ -12,7 +12,7 @@ class App10_Ajax2 extends Component{
     //컴포넌트가 활성화될 때(이 페이지가 로딩될 때) ajax 요청을 통해 데이터를 받아와서 화면에 출력되도록 한다.
     componentDidMount(){
         console.log("App10_Ajax3 컴포넌트가 마운드 되었습니다.");
-        fetch("http://localhost:8888/spring05/cafe/ajax_list.do")
+        fetch("http://localhost:8888/spring05/cafe/ajax_list_teacher.do")
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
@@ -33,16 +33,10 @@ class App10_Ajax2 extends Component{
         });
     }
 
-    //요청하기 버튼을 눌렀을때 호출되는 함수 
-    request=()=>{
-        
-    }
-
     render() {
         return (
             <div className="container">
                 <h1>ajax 요청 테스트</h1>
-                <button onClick={this.request}>요청하기</button>
                 <table className="table">
                     <thead className="thead-dark">
                         <tr>
