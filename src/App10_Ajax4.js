@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './css/bootstrap.css';
 
+//함수 기반의 다른 서버로 ajax 요청(cross origin) 처리를 하는 예제(App10_Ajax4.js)
 const App10_Ajax4=()=>{
 
     const [cafeList, setList]=React.useState([]);
@@ -8,7 +9,7 @@ const App10_Ajax4=()=>{
     //componentDidMount() 대신 사용하는 useEffect() 함수
     //아래에 전달한 화살표 함수는 컴포넌트가 마운트된(시작된) 직후에 호출된다.
     useEffect(()=>{
-        fetch("http://localhost:8888/spring05/cafe/ajax_list.do")
+        fetch("http://localhost:8888/spring05/cafe/ajax_list_teacher.do")
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
