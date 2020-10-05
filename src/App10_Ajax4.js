@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/bootstrap.css';
 
 const App10_Ajax4=()=>{
 
-    const [cafeList, setList]=React.useState([]);
+    const [cafeList, setList]=useState([]);
 
     //componentDidMount() 대신 사용하는 useEffect() 함수 
     //아래에 전달한 화살표 함수는 컴포넌트가 마운트된 직후에 호출된다.
