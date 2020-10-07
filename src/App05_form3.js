@@ -21,6 +21,14 @@ class App05_form3 extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="id">아이디</label>
+                        {/* 
+                            요소의 참조값(ref 속성)을 얻어내서 표시할 때
+                            리액트의 상태값을 이용해서 하듯이
+                            참조해서 읽어낸다음 화면에 표시할 수 있지만
+                            다시 렌더링될 경우 표시되던 데이터를 복구는 불가능하다
+                            다만 상태값으로 관리한경우 복구가 가능하다.
+                            따라서 데이터 복구가 되도록하려면 상태값으로 관리하는것이 좋다.
+                        */}
                         <input ref={(ref)=>{this.id=ref;}} type="text"  className="form-control" name="id" id="id" />
                     </div>
                     <div className="form-group">

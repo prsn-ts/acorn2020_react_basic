@@ -1,3 +1,4 @@
+//npm install 하면 package.json안에 있는 내용을 node_module 폴더에 저장한다.
 {
   "name": "basic",
   "version": "0.1.0",
@@ -36,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://localhost:8888/spring05/"
+  "homepage": "http://localhost:8888/spring05/" //다른 서버의 컨텍스트 경로를 통해 데이터를 가져올 수 있도록 설정.
 }
